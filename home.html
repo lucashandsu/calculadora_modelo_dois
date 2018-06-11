@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <div align="center">
+        Calculadora 2.
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  Desenvolvida e editada em HTML, SCSS e TS por Lucas.
+
+  <p></p>
+
+  <ion-item>
+    <ion-label stacked>Digite aqui o primeiro número:</ion-label>
+    <ion-input [(ngModel)]="numero_um" type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Digite aqui o segundo número:</ion-label>
+    <ion-input [(ngModel)]="numero_dois" type="number"></ion-input>
+  </ion-item>
+
+  <p align="center">
+    <button ion-button class="tamanho" color="dark" (click)="adicionar()">+</button>
+    <button ion-button class="tamanho" color="dark" (click)="subtrair()">-</button>
+    <button ion-button class="tamanho" color="dark" (click)="multiplicar()">*</button>
+    <button ion-button class="tamanho" color="dark" (click)="dividir()">/</button>
+    <button ion-button class="tamanho" color="dark" (click)="limpar()">C</button>
+  </p>
+
+  <ion-item>
+    <ion-label stacked>Resultado:</ion-label>
+    <ion-label>{{resultado}}</ion-label>
+  </ion-item>
+
+</ion-content>
